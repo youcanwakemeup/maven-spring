@@ -1,0 +1,30 @@
+package pro.sky.mavenspringhomework.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class CalculatorImpl implements Calculator {
+    @Override
+    public double sum(double firstNum, double secondNum) {
+        return firstNum+secondNum;
+    }
+    @Override
+    public double difference(double firstNum, double secondNum) {
+        return firstNum-secondNum;
+    }
+    @Override
+    public double division(double firstNum, double secondNum) {
+        if (secondNum == 0) {
+            throw new IllegalArgumentException("На 0 делить нельзя!");
+        }
+        return firstNum/secondNum;
+    }
+    @Override
+    public double multiplication(double firstNum, double secondNum) {
+        return firstNum*secondNum;
+    }
+    @Override
+    public String greet() {
+        return "Добро пожаловать в калькулятор!";
+    }
+}
