@@ -20,18 +20,18 @@ public class CalculatorController {
     }
     @GetMapping("/plus")
     public String showSum(@RequestParam double num1, @RequestParam double num2) {
-        return num1 + " + " + num2 + " = " + calculator.sum(num1, num2);
+        return calculator.sum(num1, num2);
     }
     @GetMapping("/minus")
     public String showDifference(@RequestParam double num1, @RequestParam double num2) {
-        return num1 + " - " + num2 + " = " + calculator.difference(num1, num2);
+        return calculator.difference(num1, num2);
     }
     @GetMapping("/multiply")
     public String showMultiplication(@RequestParam double num1, @RequestParam double num2) {
-        return num1 + " * " + num2 + " = " + calculator.multiplication(num1, num2);
+        return calculator.multiplication(num1, num2);
     }
     @GetMapping("/divide")
     public String showDivision(@RequestParam double num1, @RequestParam double num2) {
-        return num1 + " / " + num2 + " = " + calculator.division(num1, num2);
+        return calculator.division(num1, num2);
     }
 }

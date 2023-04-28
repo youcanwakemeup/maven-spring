@@ -5,23 +5,23 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalculatorImpl implements Calculator {
     @Override
-    public double sum(double firstNum, double secondNum) {
-        return firstNum+secondNum;
+    public String sum(double firstNum, double secondNum) {
+        return firstNum + " + " + secondNum + " = " + (firstNum+secondNum);
     }
     @Override
-    public double difference(double firstNum, double secondNum) {
-        return firstNum-secondNum;
+    public String difference(double firstNum, double secondNum) {
+        return firstNum + " - " + secondNum + " = " + (firstNum - secondNum);
     }
     @Override
-    public double division(double firstNum, double secondNum) {
+    public String division(double firstNum, double secondNum) {
         if (secondNum == 0) {
             throw new IllegalArgumentException("На 0 делить нельзя!");
         }
-        return firstNum/secondNum;
+        return firstNum + " / " + secondNum + " = " + (firstNum/secondNum);
     }
     @Override
-    public double multiplication(double firstNum, double secondNum) {
-        return firstNum*secondNum;
+    public String multiplication(double firstNum, double secondNum) {
+        return firstNum + " * " + secondNum + " = " + (firstNum*secondNum);
     }
     @Override
     public String greet() {
